@@ -29,5 +29,7 @@ not a random charachter! */
 		x++;
 	}
 	
+	if (checker == NULL) cout<<"There is no non-repeating letter!"<<endl;
+	else
 	cout<<"The first unrepeated letter is: "<<final<<endl;
 }
