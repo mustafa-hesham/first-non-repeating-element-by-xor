@@ -7,7 +7,7 @@ char checker;
 char final;
 int main()
 {
-	cout<<"Please enter string to find the first unrepeated letter: ";
+	cout<<"Please enter string to find the first non-repeating letter: ";
 	cin>>input;
 	int x = 0;
 	while (x < input.length())
@@ -19,7 +19,7 @@ not a random charachter! */
 		{
 			if (checker == input[t]) {
 				final = checker;
-				cout<<"The final is: "<<final<<endl;
+				cout<<"The final is: "<<final<<endl; //Tracing the final output.
 				break;
 			}
 			else
@@ -31,5 +31,5 @@ not a random charachter! */
 	
 	if (checker == NULL) cout<<"There is no non-repeating letter!"<<endl;
 	else
-	cout<<"The first unrepeated letter is: "<<final<<endl;
+	cout<<"The first non-repeated letter is: "<<final<<endl;
 }
