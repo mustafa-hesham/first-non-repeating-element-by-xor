@@ -14,7 +14,7 @@ int main()
 	{
 		checker ^= input[x];
 		
-		for (int t = 0; t < input.length(); t++) /*This loop is for checking that the output is a member of the input string
+		for (int t = 0; t < input.length(); t++) /*This loop is for checking that the output is an element of the input string
 not a random charachter! */
 		{
 			if (checker == input[t]) {
