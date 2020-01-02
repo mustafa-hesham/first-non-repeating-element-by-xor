@@ -1,31 +1,33 @@
-//This code is written by Mustafa Hesham Mohamed.
-//My student code at FSSR is 201800378.
-
 #include <iostream>
 #include <string>
 
 using namespace std;
 string input;
 char checker;
+char final;
 int main()
 {
 	cout<<"Please enter string to find the first unrepeated letter: ";
 	cin>>input;
-	checker = input[0];
-	int x = 1;
-	
+	int x = 0;
 	while (x < input.length())
 	{
-		checker ^= (input[x]);
+		checker ^= input[x];
 		
-		if (checker != 0 && x != 1)
+		for (int t = 0; t < input.length(); t++) /*This loop is for checking that the output is a member of the input string
+not a random charachter! */
 		{
-			break;
+			if (checker == input[t]) {
+				final = checker;
+				cout<<"The final is: "<<final<<endl;
+				break;
+			}
+			else
+			continue;
 		}
 		
-		else
 		x++;
 	}
-		
-	cout<<"The first unrepeated letter is: "<<checker<<endl;
+	
+	cout<<"The first unrepeated letter is: "<<final<<endl;
 }
