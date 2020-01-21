@@ -11,7 +11,7 @@ string input;
 
 int main()
 {
-	cout<<"Please enter string to check for first unrepeated letter: ";
+	cout<<"Please enter string to check for first non-repeated letter: ";
 	cin>>input;
 	
 	for (int x = 0; x < input.length(); x++)
@@ -33,6 +33,6 @@ not a random charachter! */
 		if (final == temp) checker = NULL;
 	}
 	
-	if (checker == NULL) cout<<"There is no unrepeated letter in this string!"<<endl;
-	else if (checker != NULL)cout<<"The first unrepeated letter is: "<<final<<endl;
+	if (checker == NULL) cout<<"There is no non-repeated character in this string!"<<endl;
+	else if (checker != NULL)cout<<"The first non-repeated character is: "<<final<<endl;
 }
