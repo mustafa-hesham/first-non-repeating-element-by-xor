@@ -3,36 +3,36 @@
 
 #include <iostream>
 #include <string>
-
 using namespace std;
+
+char checker, final, temp;
+int x = 0;
 string input;
-char checker;
-char final;
+
 int main()
 {
-	cout<<"Please enter string to find the first non-repeating letter: ";
+	cout<<"Please enter string to check for first unrepeated letter: ";
 	cin>>input;
-	int x = 0;
-	while (x < input.length())
+	
+	for (int x = 0; x < input.length(); x++)
 	{
 		checker ^= input[x];
+		if (checker == NULL) temp = input[x];
 		
-		for (int t = 0; t < input.length(); t++) /*This loop is for checking that the output is an element of the input string
+		for (int d = 0; d < input.length(); d++) /*This loop is for checking that the output is an element of the input string
 not a random charachter! */
 		{
-			if (checker == input[t]) {
+			if (checker == input[d]) 
+			{
 				final = checker;
-				cout<<"The final is: "<<final<<endl; //Tracing the final output.
 				break;
 			}
 			else
 			continue;
 		}
-		
-		x++;
+		if (final == temp) checker = NULL;
 	}
 	
-	if (checker == NULL) cout<<"There is no non-repeating letter!"<<endl;
-	else
-	cout<<"The first non-repeated letter is: "<<final<<endl;
+	if (checker == NULL) cout<<"There is no unrepeated letter in this string!"<<endl;
+	else if (checker != NULL)cout<<"The first unrepeated letter is: "<<final<<endl;
 }
